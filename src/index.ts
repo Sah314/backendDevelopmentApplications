@@ -11,10 +11,11 @@ app.get("/",(req:Request,res:Response)=>{
 res.status(200).json({"message":"Success"});
 
 });
-app.post("addTodo",(req:Request,res:Response)=>{
+app.post("/addTodo",(req:Request,res:Response)=>{
     let todo:Object = {name:req.body.name,
         description:req.body.description,
         status:req.body.status};
+        console.log(todo);
         res.json(todo);
     }
 
