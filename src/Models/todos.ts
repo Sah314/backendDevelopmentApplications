@@ -1,9 +1,4 @@
 import { Sequelize, DataTypes, Model } from 'sequelize';
-
-const sequelize = new Sequelize({
-    dialect: 'sqlite',
-    storage: '../../database.db', 
-  });
   
 class Todo extends Model {
   public id!: number;
@@ -13,30 +8,33 @@ class Todo extends Model {
   public userid!:number;
 }
 
-Todo.init(
-  {
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false,
+export function initTodoModel(sequelize:Sequelize){
+  Todo.init(
+    {
+      name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      description: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      status: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
+        defaultValue:false
+      },
+      userid:{
+        type:DataTypes.NUMBER,
+        allowNull:false
+      }
     },
-    description: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    status: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-      defaultValue:false
-    },
-    userid:{
-      type:DataTypes.NUMBER,
-      allowNull:false
+    {
+      sequelize,
+      tableName: 'todos', 
     }
-  },
-  {
-    sequelize,
-    tableName: 'todos', 
-  }
-);
+  );
+  
+}
 
-export { Todo };
+export default Todo ;

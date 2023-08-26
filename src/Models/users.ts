@@ -1,9 +1,4 @@
 import { Sequelize, DataTypes, Model } from 'sequelize';
-
-const sequelize = new Sequelize({
-    dialect: 'sqlite',
-    storage: '../../database.db', 
-  });
   
 class Users extends Model {
   public id!: number;
@@ -11,28 +6,33 @@ class Users extends Model {
   public email!: string;
   public password!: string;
 }
+export function initUserModel(sequelize:Sequelize){
+  Users.init(
+    {
+      id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        primaryKey: true,
+        autoIncrement:true
+      },
+      name: {
+          type: DataTypes.STRING,
+          allowNull: false,
+        },
+      email: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      password:{
+        type:DataTypes.STRING,
+        allowNull:false,
+      }
+    },
+    {
+      sequelize,
+      tableName: 'users', 
+    }
+  );
+}
 
-Users.init(
-  {
-    id: {
-      type: DataTypes.NUMBER,
-      allowNull: false,
-      autoIncrement:true
-    },
-    email: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    status: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-      defaultValue:false
-    },
-  },
-  {
-    sequelize,
-    tableName: 'users', 
-  }
-);
-
-export { Users };
+export default Users;
