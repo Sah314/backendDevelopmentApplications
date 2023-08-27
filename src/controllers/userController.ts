@@ -51,10 +51,11 @@ export const userSignup = async(req:Request,res:Response)=>{
         else{
             let newUser = await Users.create({name:username,email:email,password:hash});
             console.log("Users username is :", newUser.name);
-            return res.redirect("../login");
+            res.status(201).json({message:"Please login again at /login"});
            
         }
     });
+
         
     } catch (error) {
         console.error(error);

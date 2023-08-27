@@ -21,7 +21,8 @@ const addTodos = async(req:Request,res:Response)=>{
             res.status(404).json({"message":"token not found"});
         }
     } catch (error) {
-        res.status(501).json({message:"Server error"});
+        console.error(error);
+        return;
     }
    
 
@@ -68,6 +69,10 @@ try{
         const {title,description} = req.body;
         const id = req.params.id;
         const todo = await Todo.update({name:title,description:description},{where:{id:id}});
+        if(todo){
+            res.status(200).send({message:"todo updated successfully",updated:todo})
+        }
+        
     }
 }
 catch(error){
