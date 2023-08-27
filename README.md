@@ -1,3 +1,43 @@
+Author:Sahil Khadayate
+Assignment: Simple Backend API Development with TypeScript
+File structure:
+- src/ - contains the source code of the project.
+- src/controllers - contains the controller methods for performing operations at different routes.
+- src/middleware - Contains the authentication middleware
+- src/Models - Contains table models for the users and todos.
+- src/routes - Contains the routes that are present in this API.
+- src/db.ts - Database connection and syncing.
+- index.ts - entry point to the project.
+
+github repo link: https://github.com/Sah314/backendDevelopmentApplications/tree/SahilKhadayate_assignment
+
+
+Collection api link: https://www.postman.com/sahil314/workspace/zigytask-sahilkhadayate/collection/19671509-d315dfed-5130-4819-a9d5-69fec42ba911?action=share&creator=19671509
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Assignment: Simple Backend API Development with TypeScript
 
 Duration: 3-4 days
