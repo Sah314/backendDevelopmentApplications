@@ -11,6 +11,7 @@ class Todo extends Model {
 export function initTodoModel(sequelize:Sequelize){
   Todo.init(
     {
+      id:{type:DataTypes.INTEGER,autoIncrement:true,primaryKey:true},
       name: {
         type: DataTypes.STRING,
         allowNull: false,
