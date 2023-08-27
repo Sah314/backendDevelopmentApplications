@@ -7,7 +7,7 @@ export interface CustomRequest extends Request {
 
 const authenticateToken = (req:Request, res:Response, next:NextFunction)=> {
   const token = req.headers.authorization?.split(' ')[1]; // Get the token from the Authorization header
-
+    console.log(token);
   if (token == null) {
     return res.sendStatus(401); // Unauthorized
   }
