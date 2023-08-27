@@ -23,7 +23,7 @@ export const userLogin = async(req:Request,res:Response)=>{
         return res.status(401).json({message:"Incorrect password or email"});
     }
     }
-    return res.status(404).json({"message":"User not found!"});
+    return res.status(404).json({message:"User not found!"});
 
     
  } catch (error) {
@@ -51,8 +51,8 @@ export const userSignup = async(req:Request,res:Response)=>{
         else{
             let newUser = await Users.create({name:username,email:email,password:hash});
             console.log("Users username is :", newUser.name);
-            res.status(201).json({"message": "Successfully added user!"});
             return res.redirect("../login");
+           
         }
     });
         
