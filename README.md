@@ -32,6 +32,13 @@ https://www.postman.com/sahil314/workspace/zigytask-sahilkhadayate/collection/19
 ## Linkedin:
 https://www.linkedin.com/in/sahil-khadayate/
 
+### Approach:
+I have created a simple backend application using express,typescript,sqlite database. I have also added some basic functionalities like user registration , login etc.
+- I started by first setting up the project
+- Firstly I thought of all the routes that I will define in the project.
+- Since there will be various users and each user could define their todos separately,I created two branches for the same.
+- One branch took care of usersignup and login, while the other handled the various actions on todos.
+- 
 
 
 Assignment: Simple Backend API Development with TypeScript
