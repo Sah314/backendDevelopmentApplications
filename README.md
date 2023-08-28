@@ -1,6 +1,16 @@
 Author:Sahil Khadayate
 Assignment: Simple Backend API Development with TypeScript
-File structure:
+### Technologies:
+Database used: sqllite
+Backend framework:Express
+Language: Typescript
+IDE: Visual Studio Code
+### How to run the project? ###
+-git clone <url-of-the-repository>
+-cd <folder>
+-npm install
+-npm start
+### File structure:
 - src/ - contains the source code of the project.
 - src/controllers - contains the controller methods for performing operations at different routes.
 - src/middleware - Contains the authentication middleware
@@ -8,33 +18,19 @@ File structure:
 - src/routes - Contains the routes that are present in this API.
 - src/db.ts - Database connection and syncing.
 - index.ts - entry point to the project.
+- package.json - file containing all the dependencies required by the project as well other metadata about the project. This is the main configuration file for the project.
+- - tsconfig.json - This file contains the compiler options required by the typescript compiler.
 
-github repo link: https://github.com/Sah314/backendDevelopmentApplications/tree/SahilKhadayate_assignment
+### Links:
 
+## github repo link: 
+https://github.com/Sah314/backendDevelopmentApplications/tree/SahilKhadayate_assignment
 
-Collection api link: https://www.postman.com/sahil314/workspace/zigytask-sahilkhadayate/collection/19671509-d315dfed-5130-4819-a9d5-69fec42ba911?action=share&creator=19671509
+## Collection api link: 
+https://www.postman.com/sahil314/workspace/zigytask-sahilkhadayate/collection/19671509-d315dfed-5130-4819-a9d5-69fec42ba911?action=share&creator=19671509
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## Linkedin:
+https://www.linkedin.com/in/sahil-khadayate/
 
 
 
