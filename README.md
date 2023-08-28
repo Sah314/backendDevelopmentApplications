@@ -1,15 +1,15 @@
-Author:Sahil Khadayate
+# Author:Sahil Khadayate
 Assignment: Simple Backend API Development with TypeScript
 ### Technologies:
-Database used: sqllite
-Backend framework:Express
-Language: Typescript
-IDE: Visual Studio Code
+- Database used: sqllite
+- Backend framework:Express
+- Language: Typescript
+- IDE: Visual Studio Code
 ### How to run the project? ###
--git clone <url-of-the-repository>
--cd <folder>
--npm install
--npm start
+- git clone <url-of-the-repository>
+- cd <folder>
+- npm install
+- npm start
 ### File structure:
 - src/ - contains the source code of the project.
 - src/controllers - contains the controller methods for performing operations at different routes.
@@ -19,7 +19,7 @@ IDE: Visual Studio Code
 - src/db.ts - Database connection and syncing.
 - index.ts - entry point to the project.
 - package.json - file containing all the dependencies required by the project as well other metadata about the project. This is the main configuration file for the project.
-- - tsconfig.json - This file contains the compiler options required by the typescript compiler.
+- tsconfig.json - This file contains the compiler options required by the typescript compiler.
 
 ### Links:
 
@@ -38,7 +38,12 @@ I have created a simple backend application using express,typescript,sqlite data
 - Firstly I thought of all the routes that I will define in the project.
 - Since there will be various users and each user could define their todos separately,I created two branches for the same.
 - One branch took care of usersignup and login, while the other handled the various actions on todos.
-- 
+- Next I initialized the database for which I used sqlite, I used the sequelize library to further ease the operations on the database.
+-  Next I defined the models for the users and the todos.
+-  I defined the methods for login and signup in the userController.ts file and for todo operations in the todoController.ts
+-  For authentication of the user's session I used json web token, which is a standard for authentication.
+-  Since I couldn't do the authentication in the same methods I defined a middleware function that will be called for authentication.
+-   
 
 
 Assignment: Simple Backend API Development with TypeScript
