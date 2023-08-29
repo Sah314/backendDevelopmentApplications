@@ -43,7 +43,11 @@ I have created a simple backend application using express,typescript,sqlite data
 -  I defined the methods for login and signup in the userController.ts file and for todo operations in the todoController.ts
 -  For authentication of the user's session I used json web token, which is a standard for authentication.
 -  Since I couldn't do the authentication in the same methods I defined a middleware function that will be called for authentication.
--   
+- I setup the todoController for CRUD operation on the todos in the database.
+- I included creation ,editing, viewing and deleting a todo.
+### Challenges Faced:
+- Setting up the sql database was a tad bit challenging because until now I have only been using NoSql databases like MongoDB.
+- Rather than that I kept learning and debugging to get it right in the end.
 
 
 Assignment: Simple Backend API Development with TypeScript
